@@ -3,37 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heading Images Display</title>
+  <title>Photos by W.A.Pahl</title>
+  <meta name="description" content="A collection of photos by W.A.Pahl.">
+  <link rel="icon" href="favicon.ico">
   <style>
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 1rem; }
-    .site-title {
-      text-align: center;
+    :root { --page-padding: 1rem; --max-width: 900px; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      padding: var(--page-padding);
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+    header { text-align: center; margin-bottom: 1rem; }
+    header h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      color: #111;
+      margin: 0;
+    }
+    main { display: block; }
+    .photo {
+      margin: 0 0 1rem 0;
     }
     .heading-img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       display: block;
-      margin-bottom: 1rem;
+      margin: 0;
     }
+    .caption { font-size: 0.9rem; color: #444; text-align: center; margin-top: 0.4rem; }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Photos by W.A.Pahl</h1>
+    </header>
 
-  <div class="site-title">Photos by W.A.Pahl</div>
+    <main>
+      <!--
+        NOTE:
+        - Replace the alt text below with concise, meaningful descriptions for each photo.
+        - Add width/height attributes with the real image dimensions to avoid layout shift,
+          e.g. width="1600" height="900".
+        - Consider adding srcset/sizes or a <picture> element to serve responsive images.
+      -->
+      <figure class="photo">
+        <img src="html_pics/h1.jpg" alt="Describe photo 1 here" class="heading-img" loading="lazy" decoding="async">
+        <!-- <figcaption class="caption">Caption for photo 1 (optional)</figcaption> -->
+      </figure>
 
-  <img src="html_pics/h1.jpg" alt="Heading 1" class="heading-img">
+      <figure class="photo">
+        <img src="html_pics/h2.jpg" alt="Describe photo 2 here" class="heading-img" loading="lazy" decoding="async">
+      </figure>
 
-  <img src="html_pics/h2.jpg" alt="Heading 2" class="heading-img">
+      <figure class="photo">
+        <img src="html_pics/h3.jpg" alt="Describe photo 3 here" class="heading-img" loading="lazy" decoding="async">
+      </figure>
 
-  <img src="html_pics/h3.jpg" alt="Heading 3" class="heading-img">
+      <figure class="photo">
+        <img src="html_pics/h4.jpg" alt="Describe photo 4 here" class="heading-img" loading="lazy" decoding="async">
+      </figure>
 
-  <img src="html_pics/h4.jpg" alt="Heading 4" class="heading-img">
-
-  <img src="html_pics/h5.jpg" alt="Heading 5" class="heading-img">
-
+      <figure class="photo">
+        <img src="html_pics/h5.jpg" alt="Describe photo 5 here" class="heading-img" loading="lazy" decoding="async">
+      </figure>
+    </main>
+  </div>
 </body>
 </html>
