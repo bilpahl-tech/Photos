@@ -37,32 +37,17 @@
     }
     .caption { font-size: 0.9rem; color: #444; text-align: center; margin-top: 0.4rem; }
 
-    /* layout for image + right-side text (stacks on narrow screens) */
-    .photo-row {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
+    /* place link and site title on one line, wrap on small screens */
+    .link-row {
+      display: inline-flex;
+      gap: 0.75rem;
+      align-items: center;
       flex-wrap: wrap;
     }
-    .photo-row .photo {
-      flex: 1 1 60%;
-      margin: 0;
-    }
-    .photo-row .side-text {
-      flex: 0 0 35%;
-      /* Match the web-address paragraph font size (default body size: 1rem) */
-      font-size: 1rem;
+    .link-row a,
+    .link-row .site-title {
+      font-size: 1rem; /* matches the web-address/link size */
       color: inherit;
-      display: flex;
-      align-items: flex-start;
-    }
-
-    @media (max-width: 640px) {
-      .photo-row .side-text {
-        flex-basis: 100%;
-        margin-top: 0.5rem;
-      }
-      .photo-row .photo { flex-basis: 100%; }
     }
   </style>
 </head>
@@ -83,15 +68,12 @@
         - Consider adding srcset/sizes or a <picture> element to serve responsive images.
       -->
       <p>POV of excavation.</p>
-      <p><a href="https://youtu.be/KLTcjU16M8c?is=6zTXBbIsQ_DL6bYr">https://youtu.be/KLTcjU16M8c?is=6zTXBbIsQ_DL6bYr</a></p>
+      <p class="link-row"><a href="https://youtu.be/KLTcjU16M8c?is=6zTXBbIsQ_DL6bYr">https://youtu.be/KLTcjU16M8c?is=6zTXBbIsQ_DL6bYr</a><span class="site-title">Photos by W.A.Pahl</span></p>
 
-      <div class="photo-row">
-        <figure class="photo">
-          <img src="html_pics/h1.jpg" alt="Describe photo 1 here" class="heading-img" loading="lazy" decoding="async">
-          <!-- <figcaption class="caption">Caption for photo 1 (optional)</figcaption> -->
-        </figure>
-        <div class="side-text">Photos by W.A.Pahl</div>
-      </div>
+      <figure class="photo">
+        <img src="html_pics/h1.jpg" alt="Describe photo 1 here" class="heading-img" loading="lazy" decoding="async">
+        <!-- <figcaption class="caption">Caption for photo 1 (optional)</figcaption> -->
+      </figure>
 
       <figure class="photo">
         <img src="html_pics/h2.jpg" alt="Describe photo 2 here" class="heading-img" loading="lazy" decoding="async">
